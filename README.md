@@ -25,6 +25,6 @@ Função para que tanto desenvolvedores quanto empresas possam sair do sistema.
 ## Como rodar 
 1. Instalar e configurar o venv
 2. Baixar bibliotecas, se necessário
-3. ``` Set-ExecutionPolicy -Scope CurrentUser RemoteSigned ```
+3. ``` Set-ExecutionPolicy -Scope CurrentUser RemoteSigned ```, se necessário
 4. ``` .\venv\Scripts\Activate ```
 5. ``` flask --app main run ```
