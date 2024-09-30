@@ -1,0 +1,10 @@
+Bootstrap_Flask==2.2.0
+Flask==2.3.2
+WTForms==3.0.1
+Flask_WTF==1.2.1
+Werkzeug==3.0.0
+
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+.\venv\Scripts\Activate
+flask --app main run

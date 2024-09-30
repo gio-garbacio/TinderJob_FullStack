@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %}Empresa Registro{% endblock %}
+
+
+{% block content %}
+<div id='containerHome' class="container">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+          <img
+            src="/static/images/tinder-icon.png"
+            alt='Logo proyecto' width="100px"/>
+            <h2>Empresa Cadastro</h2>
+        </div>
+      </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            {{render_form(form, novalidate=True)}}
+        </div>
+    </div>
+    <div class="text-center">
+      <a href="{{ url_for('empresa_login') }} " class="btn btn-outline-secondary btn-sm">Voltar</a>
+  </div>
+</div>
+
+{% endblock %}

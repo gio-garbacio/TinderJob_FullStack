@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Empresa Login{% endblock %}
+
+{% block content %}
+<div id='containerHome' class="container">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+          <img
+            src="/static/images/tinder-icon.png"
+            alt='Logo proyecto' width="100px"/>
+            <h2>Empresa Login</h2>
+        </div>
+      </div>
+<div class="row justify-content-center">
+    <div class="col-4">
+        <form method="POST" action="{{ url_for('empresa_login') }}">
+            {{ form.hidden_tag() }}
+            <div data-mdb-input-init class="form-outline mb-4">
+                {{ form.email(class="form-control") }}
+                <label class="form-label" for="form2Example1">Email</label>
+            </div>
+        
+            <div data-mdb-input-init class="form-outline mb-4">
+                {{ form.senha(class="form-control") }}
+                <label class="form-label" for="form2Example2">Senha</label>
+            </div>
+        
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-danger">Entrar</button>
+            </div>        
+            <br>
+        
+            <div class="text-center">
+                <p>Não é membro? <a href="{{ url_for('empresa_register') }}">Registre-se</a></p>
+                <br><br>
+                <a href="{{ url_for('home') }}" class="btn btn-outline-secondary btn-sm">Voltar</a>
+            </div>
+        
+            {% if error %}
+                <p class="text-danger">{{ error }}</p>
+            {% endif %}
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock %}
